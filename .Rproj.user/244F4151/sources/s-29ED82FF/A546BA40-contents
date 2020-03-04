@@ -1,0 +1,110 @@
+---
+title: "contaminant"
+author: "Anbu Poosakkannu"
+date: "3/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#load libraries
+library(phyloseq); packageVersion("phyloseq")
+library(ggplot2); packageVersion("ggplot2") #plotting 
+library(decontam); packageVersion("decontam") #identification of contamination
+library(ape); packageVersion("ape") #require to load the tree
+library(dplyr); packageVersion("dplyr") #require to filter and clean up the data
+library(microbiome); packageVersion("microbiome") #require to extract the OTU and taxanomy files from phyloseq object
+
+#upload the files
+#upload the OTU abundance file
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_abund.csv",row.names=1,check.names=FALSE)
+
+#transpose the OTU abundance data to have sample names on rows
+abund_table<-t(abund_table)
+ 
+#upload the meta data file
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/originalmeta_positivenegative.csv",row.names=1,check.names=FALSE)
+ 
+#upload the tree
+OTU_tree <- read.tree("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/oturep_qiime2_tree.nwk")
+ 
+#load the taxonomy
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_taxa.csv",row.names=1,check.names=FALSE)
+
+#load the representative sequences
+OTU_seqs <- Biostrings::readDNAStringSet(file = "D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/oturep.fasta", 
+							  format = "fasta",
+							  nrec = -1L, 
+							  skip = 0L, 
+							  seek.first.rec = FALSE, 
+							  use.names = TRUE)
+
+
+#Convert the data to phyloseq format
+OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
+TAX = tax_table(as.matrix(OTU_taxonomy))
+SAM = sample_data(meta_table)
+physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM,OTU_tree,OTU_seqs)
+physeq
+
+
+#column names of taxonomy file
+colnames(tax_table(physeq))
+#if need to be renamed #here i renamed Domain into Kingdom
+colnames(tax_table(physeq)) <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+
+
+#clean up and filtering the data
+
+#remove the Archaea, organelles and unclassifed OTUs to keep only bacterial OTUs
+physeq_bacteria <- physeq %>%
+  subset_taxa(
+    Kingdom == "Bacteria" &
+    Kingdom  != "Archaea" &
+    Kingdom  != "unclassified" &
+    Family  != "mitochondria" &
+    Class   != "Chloroplast"
+  )
+
+physeq_bacteria
+
+#identify Contaminants by Frequency
+contamdf.freq <- isContaminant(physeq_bacteria, method="frequency", conc="postPCR_concentration")
+head(contamdf.freq)
+
+table(contamdf.freq$contaminant)
+
+head(which(contamdf.freq$contaminant))
+
+#plot contaminant taxa frequency Vs pcr product concentration
+set.seed(100)
+plot_frequency(physeq_bacteria, taxa_names(physeq_bacteria)[sample(which(contamdf.freq$contaminant),117)], conc="postPCR_concentration") +
+    xlab("PCR product concentration (ng/µL)")
+
+
+#filter the contaminant identified by decontaminant package
+physeq_bacteria_decontam1 <- prune_taxa(!contamdf.freq$contaminant, physeq_bacteria)
+physeq_bacteria_decontam1
+
+
+#remove an additional OTU present in negative samples #identified by manual filtering and previous knowledge
+badtaxa = "OTU_1849"
+allTaxa = taxa_names(physeq_bacteria_decontam1)
+allTaxa <- allTaxa[!(allTaxa %in% badtaxa)]
+physeq_bacteria_decontam2 = prune_taxa(allTaxa, physeq_bacteria_decontam1)
+
+physeq_clean_decontam2
+
+
+write_phyloseq(physeq_bacteria_decontam2, type = "OTU", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results")
+
+write_phyloseq(physeq_bacteria_decontam2, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results")
+
+
+#actual output file names are otu_table.csv and taxonomy_table.csv, Then file names were modfied to otu_norarefaction_abund_contaminatremoved.csv and otu_norarefaction_taxa_contaminatremoved.csv, respectively.
+
+
+
+
+```
