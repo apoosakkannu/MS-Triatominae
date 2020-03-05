@@ -5,8 +5,7 @@ date: "3/4/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, warning=FALSE}
 
 #load libraries
 library(phyloseq); packageVersion("phyloseq")
@@ -16,8 +15,13 @@ library(ape); packageVersion("ape") #require to load the tree
 library(dplyr); packageVersion("dplyr") #require to filter and clean up the data
 library(microbiome); packageVersion("microbiome") #require to write the final results
 
+```
 
-#upload the files
+
+
+```{r}
+#upload the input files into RStudio
+
 #upload the OTU abundance file
 abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_abund.csv",row.names=1,check.names=FALSE) #change the path for your computer
 
@@ -31,6 +35,14 @@ meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Origina
 #upload the taxonomy file
 OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_taxa.csv",row.names=1,check.names=FALSE) #change the path for your computer
 
+```
+
+
+
+
+```{r}
+#create a phyloseq object using uploaded datsets in previous section
+
 
 #Convert the data to phyloseq format
 OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
@@ -38,6 +50,17 @@ TAX = tax_table(as.matrix(OTU_taxonomy))
 SAM = sample_data(meta_table)
 physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
 physeq
+
+
+
+```
+
+
+
+
+```{r}
+
+#clean up and modify the phyloseq object created on previous section
 
 
 #column names of taxonomy file
@@ -49,7 +72,7 @@ colnames(tax_table(physeq)) <- c("Kingdom", "Phylum", "Class", "Order", "Family"
 
 #clean up and filtering the data
 
-#removing the contaminants to keep only bacteria
+# keep only bacteria for further analyses
 physeq_bacteria <- physeq %>%
   subset_taxa(
     Kingdom == "Bacteria" &
@@ -59,7 +82,18 @@ physeq_bacteria <- physeq %>%
     Class   != "Chloroplast"
   )
 
-physeq_bacteria
+physeq_bacteria #summary of phyloseq object
+
+
+```
+
+
+
+
+```{r, fig.width = 4, fig.height = 3}
+
+#identifcation of contaminants in phyloseq object created in previous section using decontam package
+
 
 #identify Contaminants by Frequency
 contamdf.freq <- isContaminant(physeq_bacteria, method="frequency", conc="postPCR_concentration")
@@ -95,6 +129,13 @@ contamTaxa = allTaxa2[!(allTaxa2 %in% decontamTaxa)]
 physeq_contamTaxa <- prune_taxa(contamTaxa, physeq_bacteria)
 physeq_contamTaxa
 
+```
+
+
+
+
+```{r}
+#creating results files for the above decontam analyses
 
 
 #write the final results of decontam phyloseq object
@@ -114,3 +155,4 @@ write_phyloseq(physeq_contamTaxa, type = "TAXONOMY", path = "D:/Czech/triatomine
 #original file names were otu_table.csv and taxonomy_table.csv, then the names were changed manually to otu_norarefaction_abund_onlycontaminant.csv and otu_rarefaction_taxa_onlycontaminant.csv
 
 ```
+
