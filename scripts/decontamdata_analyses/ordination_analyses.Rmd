@@ -1,0 +1,250 @@
+---
+title: "ordination_analyses"
+author: "Anbu Poosakkannu"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+#load the required libraries for the analyses
+
+library(phyloseq); packageVersion("phyloseq") #need for ordination analyses
+library(ggplot2); packageVersion("ggplot2") #need for plotting graphs
+
+```
+
+
+
+```{r}
+#upload the input files for analyses
+
+#Read the OTU file
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_abund.csv",row.names=1,check.names=FALSE)
+
+#transpose the OTU abundance data to have sample names on rows
+abund_table<-t(abund_table)
+
+#Read in the complete meta data file
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/fullmeta_negative_28022020.csv",row.names=1,check.names=FALSE)
+
+#Read the taxonomy
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_taxa.csv",row.names=1,check.names=FALSE)
+
+#colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
+ #                       "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
+  #                      "Nest", "Latitude", "Longitude", "Sample")
+
+
+
+
+```
+
+
+
+
+```{r}
+###  1.1 - Phyloseq adaptation + cleanup
+#Convert the data to phyloseq format
+OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
+TAX = tax_table(as.matrix(OTU_taxonomy))
+SAM = sample_data(meta_table)
+physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
+
+clean_data<-physeq
+#column names of taxonomy file
+colnames(tax_table(clean_data))
+
+
+
+
+```
+
+
+```{r}
+#Subset field samples:
+# Just nest samples
+clean_nest <- clean_data %>% subset_samples(!is.na(Host_Taxa) & 
+                                              !is.na(T_cruzi) & 
+                                              Origin == "Triatoma" & Nest != "houseIO" &
+                                              Nest != "bob" & Nest != "LVH" & Origin == "field" &
+                                              T_cruzi == "N") %>% prune_taxa(taxa_sums(.) > 0, .)
+clean_nest
+
+
+
+
+
+
+```
+
+
+
+```{r}
+###### Removing low abundance OTUs
+# melt to long format (for ggploting) 
+# prune out low abundance genera
+nest_genus <- clean_nest %>%
+  tax_glom(taxrank = "Genus") %>%                      # agglomerate at genus level
+  transform_sample_counts(function(x) {x/sum(x)} ) %>% # Transform to rel. abundance
+  psmelt() %>%                                         # Melt to long format
+  filter(Abundance > 0.01) %>%                          # Filter out low abundance taxa
+  arrange(Sample)                                      # Arrange alphabetically by sample
+
+# Rarefy reads to even out the depth
+nest_rarefy <- rarefy_even_depth(clean_nest, sample.size = 1000)
+nest_rarefy
+
+# Create some new subsets for later use here:
+rubida_rarefy <- nest_rarefy %>% subset_samples(Host_Taxa == "Trubida")
+chaparral <- nest_rarefy %>% subset_samples(Locality == "Chaparral")
+tucson <- rubida_rarefy %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")
+young <- nest_rarefy %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "L3")
+
+
+
+
+```
+
+
+```{r}
+
+############## 1.2 UNCONSTRAINED ORDINATION ##############
+# Set.seed for randomisation, making results reproducible
+set.seed(5)
+# 1.2.1 NMDS on rubida ontogeny
+rubida_nmds <- ordinate(
+  physeq = rubida_rarefy, 
+  method = "NMDS", 
+  distance = "bray"
+)
+## Stress = 0.15
+## Plot it
+rub2<-plot_ordination(
+  physeq = rubida_rarefy,
+  ordination = rubida_nmds,
+  color = "Instar",
+  shape = "Instar",
+  title = "NMDS of Rubida ontogeny") + 
+  scale_color_viridis(option="plasma", discrete = TRUE, begin = 0.2, end = 0.9, direction = -1) +
+  theme(panel.grid.major = element_line(size = 0.05, linetype = 'solid', colour = "white"),
+        panel.grid.minor = element_line(size = 0.05, linetype = 'solid', colour = "white"),
+        plot.background=element_rect(fill = "grey90"),
+        panel.background = element_rect(fill = 'black'),
+        axis.line = element_line(colour = "white"),) +
+  geom_point(alpha = 1, size = 4) +
+  stat_ellipse(geom='polygon', aes(colour=Instar, fill=Instar), alpha = 0.1)
+print(rub2)
+## 1.2.2 PERMANOVA ON ONTOGENY
+rubida_bray <- phyloseq::distance(rubida_rarefy, method = "bray")
+rubida_rarefy_df <- data.frame(sample_data(rubida_rarefy))
+adonis(rubida_bray ~ Instar, data = rubida_rarefy_df, permutations = 999, strata = rubida_rarefy_df$Locality)
+beta1 <- betadisper(rubida_bray, rubida_rarefy_df$Instar, type = "median", bias.adjust = TRUE)
+permutest(beta1, pairwise = TRUE, permutations = 999, model = "direct")
+
+
+
+####### 1.2.3 NMDS on multi-species nest from Chaparral, TX
+## Now NMDS
+chap_nmds <- ordinate(
+  physeq = chaparral, 
+  method = "NMDS", 
+  distance = "bray"
+)
+## 0.09 stress
+chap2<-plot_ordination(
+  physeq = chaparral,
+  ordination = chap_nmds,
+  color = "Host_Taxa",
+  shape = "Host_Taxa",
+  title = "NMDS of Chaparral Multi-Species Nest") + 
+  scale_color_viridis(option="plasma", discrete = TRUE, begin = 0.5, end = 0.8, direction = 1) +
+  theme(panel.grid.major = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        panel.grid.minor = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        plot.background=element_rect(fill = "white"),
+        panel.background = element_rect(fill = 'white'),
+        axis.line = element_line(colour = "black"),) +
+  geom_point(alpha = 1, size = 4) +
+  geom_text(aes(label=Instar),hjust=1, vjust=0, size=3, colour = "black")+ 
+  stat_ellipse(geom='polygon', aes(colour=Host_Taxa, fill=Host_Taxa), alpha = 0.1, level = 0.95)
+print(chap2)
+## 1.2.4 PERMANOVA ON CHAPARRAL
+chap_bray <- phyloseq::distance(chaparral, method = "bray")
+chap_df <- data.frame(sample_data(chaparral))
+adonis(chap_bray ~ Host_Taxa, data = chap_df, permutations = 999, strata = chap_df$Instar) #27% of the variation is species level
+## Beta dispersion
+beta2 <- betadisper(chap_bray, chap_df$Host_Taxa)
+permutest(beta2, pairwise = TRUE)
+
+
+
+## 1.2.5 NMDS on rubida from 2 locations in Arizona
+tuc_nmds <- ordinate(
+  physeq = tucson, 
+  method = "NMDS", 
+  distance = "bray"
+)
+## 0.17 stress
+tuc1<-plot_ordination(
+  physeq = tucson,
+  ordination = tuc_nmds,
+  color = "Locality",
+  shape = "Instar_range",
+  title = "NMDS of Tucson rubida") + 
+  scale_color_viridis(option = "plasma", discrete = TRUE, begin = 0.3, end = 0.8)+
+  theme(panel.grid.major = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        panel.grid.minor = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        plot.background=element_rect(fill = "gray90"),
+        panel.background = element_rect(fill = 'white'),
+        axis.line = element_line(colour = "black"),) +
+  geom_point(alpha = 1, size = 4) +
+  #geom_text(aes(label=Instar),hjust=1, vjust=0, size=3, colour = "black")+ 
+  stat_ellipse(geom='polygon', aes(colour=Locality, fill=Locality), alpha = 0.1, level = 0.95)
+print(tuc1)
+## 1.2.6. PERMANOVA ON TUCSON NEST RUBIDA
+tuc_bray <- phyloseq::distance(tucson, method = "bray")
+tuc_df <- data.frame(sample_data(tucson))
+adonis(tuc_bray ~ Locality*Instar, data = tuc_df)
+beta3 <- betadisper(tuc_bray, tuc_df$Locality)
+permutest(beta3)
+
+
+
+######  1.2.7 NMDS on young instar species-specific differences
+young_nmds <- ordinate(
+  physeq = young, 
+  method = "NMDS", 
+  distance = "bray"
+)
+### stress = ~0.2
+young1<-plot_ordination(
+  physeq = young,
+  ordination = young_nmds,
+  color = "Host_Taxa",
+  shape = "Host_Taxa",
+  title = "Young instars") + 
+  scale_color_viridis(option = "plasma", discrete = TRUE, begin = 0.2, end = 0.9)+
+  theme(panel.grid.major = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        panel.grid.minor = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        plot.background=element_rect(fill = "white"),
+        panel.background = element_rect(fill = 'white'),
+        axis.line = element_line(colour = "black"),) +
+  geom_point(alpha = 1, size = 4)+
+  stat_ellipse(geom='polygon', aes(colour=Host_Taxa, fill=Host_Taxa), alpha = 0.1, level = 0.95)
+print(young1)
+## 1.2.8
+young_bray <- phyloseq::distance(young, method = "bray")
+young_df <- data.frame(sample_data(young))
+adonis(young_bray ~ Host_Taxa, data = young_df) 
+## Beta dispersion
+beta4 <- betadisper(young_bray, young_df$Host_Taxa)
+permutest(beta4, pairwise = TRUE)
+
+
+
+
+
+
+
+```
+

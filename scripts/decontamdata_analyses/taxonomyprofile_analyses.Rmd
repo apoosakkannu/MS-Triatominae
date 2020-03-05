@@ -1,0 +1,158 @@
+---
+title: "taxonomyprofile_analyses"
+author: "Anbu Poosakkannu"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+#load the required libraries for the analyses
+
+library(phyloseq); packageVersion("phyloseq") #need for ordination analyses
+library(ggplot2); packageVersion("ggplot2") #need for plotting graphs
+
+
+
+
+
+```
+
+```{r}
+#Read the OTU file
+abund_table<-read.csv("otu_decontam_abund.csv",row.names=1,check.names=FALSE)
+
+#transpose the OTU abundance data to have sample names on rows
+abund_table<-t(abund_table)
+
+#Read in the complete meta data file
+meta_table<-read.csv("MapAndReadsUpdated2019.csv",row.names=1,check.names=FALSE)
+
+#Read the taxonomy
+OTU_taxonomy<-read.csv("otu_decontam_taxa.csv",row.names=1,check.names=FALSE)
+
+
+colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
+                        "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
+                        "Nest", "Latitude", "Longitude", "Sample")
+
+
+
+
+```
+
+```{r}
+###  1.1 - Phyloseq adaptation + cleanup
+#Convert the data to phyloseq format
+OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
+TAX = tax_table(as.matrix(OTU_taxonomy))
+SAM = sample_data(meta_table)
+physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM,OTU_tree,OTU_seqs)
+
+clean_data<-physeq
+#column names of taxonomy file
+colnames(tax_table(clean_data))
+
+
+
+
+```
+
+
+```{r}
+#Subset field samples:
+# Just nest samples
+clean_nest <- clean_data %>% subset_samples(!is.na(Host_Taxa) & 
+                                              !is.na(T_cruzi) & 
+                                              Organism == "Triatoma" & Nest != "houseIO" &
+                                              Nest != "bob" & Nest != "LVH" & Origin == "field" &
+                                              T_cruzi == "N") %>% prune_taxa(taxa_sums(.) > 0, .)
+clean_nest
+
+
+
+
+
+
+```
+
+
+
+```{r}
+###### Removing low abundance OTUs
+# melt to long format (for ggploting) 
+# prune out low abundance genera
+nest_genus <- clean_nest %>%
+  tax_glom(taxrank = "Genus") %>%                      # agglomerate at genus level
+  transform_sample_counts(function(x) {x/sum(x)} ) %>% # Transform to rel. abundance
+  psmelt() %>%                                         # Melt to long format
+  filter(Abundance > 0.01) %>%                          # Filter out low abundance taxa
+  arrange(Sample)                                      # Arrange alphabetically by sample
+
+# Rarefy reads to even out the depth
+nest_rarefy <- rarefy_even_depth(clean_nest, sample.size = 1000)
+nest_rarefy
+
+# Create some new subsets for later use here:
+rubida_rarefy <- nest_rarefy %>% subset_samples(Host_Taxa == "Trubida")
+chaparral <- nest_rarefy %>% subset_samples(Locality == "Chaparral")
+tucson <- rubida_rarefy %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")
+young <- nest_rarefy %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "L3")
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+########## SECTION 3 - Full visualisation of bacterial taxa #############
+#Choose level of taxa
+clean_data_gen<-taxa_level(clean_data, "Genus")
+#normalize the data
+clean_data_barplotgen <- normalise_data(clean_data_gen, norm.method = "relative")
+
+#Different subsets:
+rubida_ontogeny <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Trubida")
+gerst_ontogeny <-  clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tgerstaeckeri")
+protra_ontogeny <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tprotracta")
+sang <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tsanguisuga")
+lec <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tlecticularia")
+nest2 <- clean_data_barplotgen %>% subset_samples(Locality == "Chaparral")
+
+# Rubida only - across instars - genus level
+rubida_gen <- plot_taxa(rubida_ontogeny, grouping_column = "Instar",
+                        method = "hellinger", number.taxa = 20, filename = NULL)
+print(rubida_gen)
+
+# Gerstaeckeri only - across instars - genus level
+gerst_gen <- plot_taxa(gerst_ontogeny, grouping_column = "Instar",
+                       method = "hellinger", number.taxa = 20, filename = NULL)
+print(gerst_gen)
+
+## Protracta ontogeny - genus level
+protra_gen <- plot_taxa(protra_ontogeny, grouping_column = "Instar",
+                        method = "hellinger", number.taxa = 20, filename = NULL)
+print(protra_gen)
+
+## Sang
+sang_gen <- plot_taxa(sang, grouping_column = "Instar",
+                      method = "hellinger", number.taxa = 20, filename = NULL)
+print(sang_gen)
+
+lectic_gen <- plot_taxa(lec, grouping_column = "Instar",
+                        method = "hellinger", number.taxa = 20, filename = NULL)
+print(lectic_gen)
+
+# For chaparral nest 2 - species difference - genus level
+nest2gen <- plot_taxa(nest2, grouping_column = "Host_Taxa",
+                      method = "hellinger", number.taxa = 20, filename = NULL)
+print(nest2gen)
+```

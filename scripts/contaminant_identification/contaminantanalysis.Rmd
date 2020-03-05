@@ -143,7 +143,7 @@ write_phyloseq(physeq_bacteria_decontam2, type = "OTU", path = "D:/Czech/triatom
 write_phyloseq(physeq_bacteria_decontam2, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/results/contaminant_results/") #change the path for your computer
 
 
-#original file names were otu_table.csv and taxonomy_table.csv, then the names were changed manually to otu_norarefaction_abund_contaminantremoved.csv and otu_rarefaction_taxa_contaminantremoved.csv
+#original file names were otu_table.csv and taxonomy_table.csv, then the names were changed manually to otu_norarefaction_decontam_abund.csv and otu_rarefaction_decontam_taxa.csv
 
 
 #write the final results of contam phyloseq object
