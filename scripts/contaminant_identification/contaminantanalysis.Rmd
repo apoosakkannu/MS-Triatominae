@@ -19,17 +19,17 @@ library(microbiome); packageVersion("microbiome") #require to write the final re
 
 #upload the files
 #upload the OTU abundance file
-abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_abund.csv",row.names=1,check.names=FALSE)
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_abund.csv",row.names=1,check.names=FALSE) #change the path for your computer
 
 #transpose the OTU abundance data to have sample names on rows
 abund_table<-t(abund_table)
  
 #upload the meta data file
-meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/originalmeta_positivenegative.csv",row.names=1,check.names=FALSE)
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/originalmeta_positivenegative.csv",row.names=1,check.names=FALSE) #change the path for your computer
  
 
 #upload the taxonomy file
-OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_taxa.csv",row.names=1,check.names=FALSE)
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_PositiveNegative/otu_norarefaction_taxa.csv",row.names=1,check.names=FALSE) #change the path for your computer
 
 
 #Convert the data to phyloseq format
@@ -91,9 +91,9 @@ physeq_bacteria_decontam2
 
 
 #write the final results
-write_phyloseq(physeq_bacteria_decontam2, type = "OTU", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results/")
+write_phyloseq(physeq_bacteria_decontam2, type = "OTU", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results/") #change the path for your computer
 
-write_phyloseq(physeq_bacteria_decontam2, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results/")
+write_phyloseq(physeq_bacteria_decontam2, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results/") #change the path for your computer
 
 
 #original file names were otu_table.csv and taxonomy_table.csv, then the names were changed manually to otu_norarefaction_abund_contaminantremoved.csv and otu_rarefaction_taxa_contaminantremoved.csv
