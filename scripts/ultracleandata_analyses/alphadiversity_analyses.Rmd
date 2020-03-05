@@ -21,16 +21,16 @@ library(microbiomeSeq); packageVersion("microbiomeSeq") #require for the alphadi
 #uplopad the data files for the analyses
 
 #Read the OTU file
-abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 #transpose the OTU abundance data to have sample names on rows
 abund_table<-t(abund_table)
 
 #Read in the complete meta data file
-meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 #Read the taxonomy
-OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 
 #colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
@@ -77,7 +77,7 @@ young <- clean_data %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "
 Rubida <- clean_data %>% subset_samples(Host_Taxa == "Trubida")
 r1 <-plot_anova_diversity(Rubida, method = c("richness", "shannon"), 
                           grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r1.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r1.pdf",width=8)#change the path for your computer
 print(r1)
 dev.off()
 
@@ -85,7 +85,7 @@ dev.off()
 protracta <- clean_data %>% subset_samples(Host_Taxa == "Tprotracta")
 r2 <- plot_anova_diversity(protracta, method = c("richness", "shannon"), 
                            grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r2.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r2.pdf",width=8)#change the path for your computer
 print(r2)
 dev.off()
 
@@ -93,7 +93,7 @@ dev.off()
 gerst <- clean_data %>%  subset_samples(Host_Taxa == "Tgerstaeckeri")
 r3 <- plot_anova_diversity(gerst, method = c("richness", "shannon"), 
                            grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r3.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r3.pdf",width=8)#change the path for your computer
 print(r3)
 dev.off()
 
@@ -101,7 +101,7 @@ dev.off()
 lect <- clean_data %>% subset_samples(Host_Taxa == "Tlecticularia")
 r4 <- plot_anova_diversity(lect, method = c("richness", "shannon"),
                            grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r4.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r4.pdf",width=8)#change the path for your computer
 print(r4)
 dev.off()
 
@@ -109,7 +109,7 @@ dev.off()
 sang <- clean_data %>% subset_samples(Host_Taxa == "Tsanguisuga")
 r5 <- plot_anova_diversity(sang, method = c("richness", "shannon"),
                            grouping_column = "Instar", pValueCutoff = 0.1)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r5.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r5.pdf",width=8)#change the path for your computer
 print(r5)
 dev.off()
 

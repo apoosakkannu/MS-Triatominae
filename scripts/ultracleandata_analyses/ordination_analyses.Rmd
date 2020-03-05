@@ -20,16 +20,16 @@ library(ggplot2); packageVersion("ggplot2") #need for plotting graphs
 #uplopad the data files for the analyses
 
 #Read the OTU file
-abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 #transpose the OTU abundance data to have sample names on rows
 abund_table<-t(abund_table)
 
 #Read in the complete meta data file
-meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 #Read the taxonomy
-OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 
 #colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
@@ -104,7 +104,7 @@ rub2<-plot_ordination(
   geom_point(alpha = 1, size = 4) +
   stat_ellipse(geom='polygon', aes(colour=Instar, fill=Instar), alpha = 0.1)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/rub2.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/rub2.pdf",width=8)#change the path for your computer
 print(rub2)
 dev.off()
 
@@ -150,7 +150,7 @@ chap2<-plot_ordination(
   geom_text(aes(label=Instar),hjust=1, vjust=0, size=3, colour = "black")+ 
   stat_ellipse(geom='polygon', aes(colour=Host_Taxa, fill=Host_Taxa), alpha = 0.1, level = 0.95)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/chap2.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/chap2.pdf",width=8)#change the path for your computer
 print(chap2)
 dev.off()
 
@@ -193,7 +193,7 @@ tuc1<-plot_ordination(
   #geom_text(aes(label=Instar),hjust=1, vjust=0, size=3, colour = "black")+ 
   stat_ellipse(geom='polygon', aes(colour=Locality, fill=Locality), alpha = 0.1, level = 0.95)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/tuc1.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/tuc1.pdf",width=8)#change the path for your computer
 print(tuc1)
 dev.off()
 
@@ -238,7 +238,7 @@ young1<-plot_ordination(
   geom_point(alpha = 1, size = 4)+
   stat_ellipse(geom='polygon', aes(colour=Host_Taxa, fill=Host_Taxa), alpha = 0.1, level = 0.95)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/young1.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/young1.pdf",width=8)#change the path for your computer
 print(young1)
 dev.off()
 

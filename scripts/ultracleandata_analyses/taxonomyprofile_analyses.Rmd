@@ -20,16 +20,16 @@ library(microbiomeSeq); packageVersion("microbiomeSeq") #require for the taxonom
 #uplopad the data files for the analyses
 
 #Read the OTU file
-abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 #transpose the OTU abundance data to have sample names on rows
 abund_table<-t(abund_table)
 
 #Read in the complete meta data file
-meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 #Read the taxonomy
-OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)#change the path for your computer
 
 
 #colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
@@ -79,14 +79,14 @@ nest2 <- clean_data_barplotgen %>% subset_samples(Locality == "Chaparral")
 # Rubida only - across instars - genus level
 rubida_gen <- plot_taxa(rubida_ontogeny, grouping_column = "Instar",
                         method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/rubida_gen.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/rubida_gen.pdf",width=8)#change the path for your computer
 print(rubida_gen)
 dev.off()
 
 # Gerstaeckeri only - across instars - genus level
 gerst_gen <- plot_taxa(gerst_ontogeny, grouping_column = "Instar",
                        method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/gerst_gen.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/gerst_gen.pdf",width=8)#change the path for your computer
 print(gerst_gen)
 dev.off()
 
@@ -96,7 +96,7 @@ dev.off()
 protra_gen <- plot_taxa(protra_ontogeny, grouping_column = "Instar",
                         method = "hellinger", number.taxa = 20, filename = NULL)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/protra_gen.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/protra_gen.pdf",width=8)#change the path for your computer
 print(protra_gen)
 dev.off()
 
@@ -104,7 +104,7 @@ dev.off()
 ## Sanguisuga ontogeny -genus level
 sang_gen <- plot_taxa(sang, grouping_column = "Instar",
                       method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/sang_gen.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/sang_gen.pdf",width=8)#change the path for your computer
 print(sang_gen)
 dev.off()
 
@@ -112,14 +112,14 @@ dev.off()
 #Leticularia ontogeny - genus level
 lectic_gen <- plot_taxa(lec, grouping_column = "Instar",
                         method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/letic_gen.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/letic_gen.pdf",width=8)#change the path for your computer
 print(lectic_gen)
 dev.off()
 
 # For chaparral nest 2 - species difference - genus level
 nest2gen <- plot_taxa(nest2, grouping_column = "Host_Taxa",
                       method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/nest2_gen.pdf",width=8)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/nest2_gen.pdf",width=8)#change the path for your computer
 print(nest2gen)
 dev.off()
 
