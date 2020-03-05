@@ -1,0 +1,117 @@
+---
+title: "ultraclean_alphadiversity_analyses"
+author: "Anbu Poosakkannu"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#load the required libraries for the analyses
+
+library(microbiomeSeq); packageVersion("microbiomeSeq") #require for the alphadiversity analyses 
+
+
+
+
+```
+
+
+```{r}
+
+#uplopad the data files for the analyses
+
+#Read the OTU file
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)
+
+#transpose the OTU abundance data to have sample names on rows
+abund_table<-t(abund_table)
+
+#Read in the complete meta data file
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)
+
+#Read the taxonomy
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)
+
+
+#colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
+  #                      "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
+   #                     "Nest", "Latitude", "Longitude", "Sample")
+
+
+
+
+```
+
+
+```{r}
+###  1.1 - Phyloseq adaptation + cleanup
+#Convert the data to phyloseq format
+OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
+TAX = tax_table(as.matrix(OTU_taxonomy))
+SAM = sample_data(meta_table)
+physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
+
+clean_data<-physeq
+#column names of taxonomy file
+colnames(tax_table(clean_data))
+
+
+
+```
+
+
+```{r}
+# Create some new subsets for later use here:
+rubida_rarefy <- clean_data %>% subset_samples(Host_Taxa == "Trubida")
+chaparral <- clean_data %>% subset_samples(Locality == "Chaparral")
+tucson <- clean_data %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")
+young <- clean_data %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "L3")
+
+
+```
+
+
+
+```{r}
+### Species-specific ontogeny
+Rubida <- clean_data %>% subset_samples(Host_Taxa == "Trubida")
+r1 <-plot_anova_diversity(Rubida, method = c("richness", "shannon"), 
+                          grouping_column = "Instar", pValueCutoff = 0.05)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r1.pdf",width=8)
+print(r1)
+dev.off()
+
+
+protracta <- clean_data %>% subset_samples(Host_Taxa == "Tprotracta")
+r2 <- plot_anova_diversity(protracta, method = c("richness", "shannon"), 
+                           grouping_column = "Instar", pValueCutoff = 0.05)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r2.pdf",width=8)
+print(r2)
+dev.off()
+
+
+gerst <- clean_data %>%  subset_samples(Host_Taxa == "Tgerstaeckeri")
+r3 <- plot_anova_diversity(gerst, method = c("richness", "shannon"), 
+                           grouping_column = "Instar", pValueCutoff = 0.05)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r3.pdf",width=8)
+print(r3)
+dev.off()
+
+
+lect <- clean_data %>% subset_samples(Host_Taxa == "Tlecticularia")
+r4 <- plot_anova_diversity(lect, method = c("richness", "shannon"),
+                           grouping_column = "Instar", pValueCutoff = 0.05)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r4.pdf",width=8)
+print(r4)
+dev.off()
+
+
+sang <- clean_data %>% subset_samples(Host_Taxa == "Tsanguisuga")
+r5 <- plot_anova_diversity(sang, method = c("richness", "shannon"),
+                           grouping_column = "Instar", pValueCutoff = 0.1)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r5.pdf",width=8)
+print(r5)
+dev.off()
+
+```
+

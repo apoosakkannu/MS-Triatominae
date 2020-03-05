@@ -1,0 +1,129 @@
+---
+title: "taxonomyprofile_analyses"
+author: "Anbu Poosakkannu"
+date: "3/5/2020"
+output: html_document
+---
+
+
+```{r setup}
+#load the required libraries for the analyses
+
+library(microbiomeSeq); packageVersion("microbiomeSeq") #require for the taxonomy profile analyses
+
+
+```
+
+
+
+```{r}
+#uplopad the data files for the analyses
+
+#Read the OTU file
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_abund.csv",row.names=1,check.names=FALSE)
+
+#transpose the OTU abundance data to have sample names on rows
+abund_table<-t(abund_table)
+
+#Read in the complete meta data file
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/ultrameta_28022020.csv",row.names=1,check.names=FALSE)
+
+#Read the taxonomy
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultradata/otu_ultraclean_taxa.csv",row.names=1,check.names=FALSE)
+
+
+#colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
+  #                      "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
+   #                     "Nest", "Latitude", "Longitude", "Sample")
+
+
+
+
+```
+
+
+```{r}
+###  1.1 - Phyloseq adaptation + cleanup
+#Convert the data to phyloseq format
+OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
+TAX = tax_table(as.matrix(OTU_taxonomy))
+SAM = sample_data(meta_table)
+physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
+
+clean_data<-physeq
+#column names of taxonomy file
+colnames(tax_table(clean_data))
+
+
+
+```
+
+
+```{r}
+#genus level taxonomy profiling of phyloseq object from previous section
+
+#merge the taxa to genus level
+clean_data_gen<-taxa_level(clean_data, "Genus")
+
+#normalize the data
+clean_data_barplotgen <- normalise_data(clean_data_gen, norm.method = "relative")
+
+#Different subsets:
+rubida_ontogeny <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Trubida")
+gerst_ontogeny <-  clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tgerstaeckeri")
+protra_ontogeny <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tprotracta")
+sang <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tsanguisuga")
+lec <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tlecticularia")
+nest2 <- clean_data_barplotgen %>% subset_samples(Locality == "Chaparral")
+
+# Rubida only - across instars - genus level
+rubida_gen <- plot_taxa(rubida_ontogeny, grouping_column = "Instar",
+                        method = "hellinger", number.taxa = 20, filename = NULL)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/rubida_gen.pdf",width=8)
+print(rubida_gen)
+dev.off()
+
+# Gerstaeckeri only - across instars - genus level
+gerst_gen <- plot_taxa(gerst_ontogeny, grouping_column = "Instar",
+                       method = "hellinger", number.taxa = 20, filename = NULL)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/gerst_gen.pdf",width=8)
+print(gerst_gen)
+dev.off()
+
+
+
+## Protracta ontogeny - genus level
+protra_gen <- plot_taxa(protra_ontogeny, grouping_column = "Instar",
+                        method = "hellinger", number.taxa = 20, filename = NULL)
+
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/protra_gen.pdf",width=8)
+print(protra_gen)
+dev.off()
+
+
+## Sanguisuga ontogeny -genus level
+sang_gen <- plot_taxa(sang, grouping_column = "Instar",
+                      method = "hellinger", number.taxa = 20, filename = NULL)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/sang_gen.pdf",width=8)
+print(sang_gen)
+dev.off()
+
+
+#Leticularia ontogeny - genus level
+lectic_gen <- plot_taxa(lec, grouping_column = "Instar",
+                        method = "hellinger", number.taxa = 20, filename = NULL)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/letic_gen.pdf",width=8)
+print(lectic_gen)
+dev.off()
+
+# For chaparral nest 2 - species difference - genus level
+nest2gen <- plot_taxa(nest2, grouping_column = "Host_Taxa",
+                      method = "hellinger", number.taxa = 20, filename = NULL)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/nest2_gen.pdf",width=8)
+print(nest2gen)
+dev.off()
+
+
+
+```
+

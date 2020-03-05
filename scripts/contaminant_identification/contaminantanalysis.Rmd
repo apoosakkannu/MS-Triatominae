@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, warning=FALSE}
 
 #load libraries
-library(phyloseq); packageVersion("phyloseq")
+library(phyloseq); packageVersion("phyloseq") #required for the different microbiome analyses
 library(ggplot2); packageVersion("ggplot2") #required for plotting
 library(decontam); packageVersion("decontam") #required for contamination identification
 library(ape); packageVersion("ape") #require to load the tree
