@@ -11,7 +11,6 @@ output: html_document
 library(phyloseq); packageVersion("phyloseq") #required for the different microbiome analyses
 library(ggplot2); packageVersion("ggplot2") #required for plotting
 library(decontam); packageVersion("decontam") #required for contamination identification
-library(ape); packageVersion("ape") #require to load the tree
 library(dplyr); packageVersion("dplyr") #require to filter and clean up the data
 library(microbiome); packageVersion("microbiome") #require to write the final results
 
