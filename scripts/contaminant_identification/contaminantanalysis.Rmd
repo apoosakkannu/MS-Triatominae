@@ -50,7 +50,7 @@ colnames(tax_table(physeq)) <- c("Kingdom", "Phylum", "Class", "Order", "Family"
 #clean up and filtering the data
 
 #removing the contaminants to keep only bacteria
-physeq_clean <- physeq %>%
+physeq_bacteria <- physeq %>%
   subset_taxa(
     Kingdom == "Bacteria" &
     Kingdom  != "Archaea" &
@@ -75,27 +75,42 @@ plot_frequency(physeq_bacteria, taxa_names(physeq_bacteria)[sample(which(contamd
     xlab("PCR product concentration (ng/µL)")
 
 
-#filter the contaminant identified by decontaminant package
+#filter the contaminant identified by decontaminant package #117 OTUs identifed as contaminats
 physeq_bacteria_decontam1 <- prune_taxa(!contamdf.freq$contaminant, physeq_bacteria)
 physeq_bacteria_decontam1
 
 
 #remove an additional OTU (unknown bacteria) present in negative samples #identifed by potential contaminat by manual filtering in excel and previous knowlegde  
-badtaxa = "OTU_1849"
-allTaxa = taxa_names(physeq_bacteria_decontam1)
-allTaxa <- allTaxa[!(allTaxa %in% badtaxa)]
-physeq_bacteria_decontam2 = prune_taxa(allTaxa, physeq_bacteria_decontam1)
+badTaxa = "OTU_1849"
+allTaxa1 = taxa_names(physeq_bacteria_decontam1)
+allTaxa1 <- allTaxa1[!(allTaxa1 %in% badTaxa)]
+physeq_bacteria_decontam2 <- prune_taxa(allTaxa1, physeq_bacteria_decontam1)
 
 physeq_bacteria_decontam2
 
+#make a phyloseq object for the contaminant OTUs 
+decontamTaxa = taxa_names(physeq_bacteria_decontam2)
+allTaxa2 = taxa_names(physeq_bacteria)
+contamTaxa = allTaxa2[!(allTaxa2 %in% decontamTaxa)]
+physeq_contamTaxa <- prune_taxa(contamTaxa, physeq_bacteria)
+physeq_contamTaxa
 
 
-#write the final results
-write_phyloseq(physeq_bacteria_decontam2, type = "OTU", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results/") #change the path for your computer
 
-write_phyloseq(physeq_bacteria_decontam2, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/scripts/contaminant_results/") #change the path for your computer
+#write the final results of decontam phyloseq object
+write_phyloseq(physeq_bacteria_decontam2, type = "OTU", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/results/contaminant_results/") #change the path for your computer
+
+write_phyloseq(physeq_bacteria_decontam2, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/results/contaminant_results/") #change the path for your computer
 
 
 #original file names were otu_table.csv and taxonomy_table.csv, then the names were changed manually to otu_norarefaction_abund_contaminantremoved.csv and otu_rarefaction_taxa_contaminantremoved.csv
+
+
+#write the final results of contam phyloseq object
+write_phyloseq(physeq_contamTaxa, type = "OTU", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/results/contaminant_results/") #change the path for your computer
+
+write_phyloseq(physeq_contamTaxa, type = "TAXONOMY", path = "D:/Czech/triatomine_manuscript/MS-Triatominae/results/contaminant_results/") #change the path for your computer
+
+#original file names were otu_table.csv and taxonomy_table.csv, then the names were changed manually to otu_norarefaction_abund_onlycontaminant.csv and otu_rarefaction_taxa_onlycontaminant.csv
 
 ```
