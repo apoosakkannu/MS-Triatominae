@@ -5,7 +5,7 @@ date: "3/5/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r}
 
 #load the required libraries for the analyses
 
@@ -19,39 +19,41 @@ library(ggplot2); packageVersion("ggplot2") #need for plotting graphs
 ```
 
 ```{r}
+#upload the input files for analyses
+
 #Read the OTU file
-abund_table<-read.csv("otu_decontam_abund.csv",row.names=1,check.names=FALSE)
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_negative_abund.csv",row.names=1,check.names=FALSE)
 
 #transpose the OTU abundance data to have sample names on rows
 abund_table<-t(abund_table)
 
 #Read in the complete meta data file
-meta_table<-read.csv("MapAndReadsUpdated2019.csv",row.names=1,check.names=FALSE)
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/fullmeta_negative_28022020.csv",row.names=1,check.names=FALSE)
 
 #Read the taxonomy
-OTU_taxonomy<-read.csv("otu_decontam_taxa.csv",row.names=1,check.names=FALSE)
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_negative_taxa.csv",row.names=1,check.names=FALSE)
 
-
-colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
-                        "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
-                        "Nest", "Latitude", "Longitude", "Sample")
+#colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
+ #                       "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
+  #                      "Nest", "Latitude", "Longitude", "Sample")
 
 
 
 
 ```
 
+
+
 ```{r}
-###  1.1 - Phyloseq adaptation + cleanup
+###Phyloseq adaptation + cleanup
 #Convert the data to phyloseq format
 OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
 TAX = tax_table(as.matrix(OTU_taxonomy))
 SAM = sample_data(meta_table)
-physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM,OTU_tree,OTU_seqs)
+physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
 
 clean_data<-physeq
-#column names of taxonomy file
-colnames(tax_table(clean_data))
+
 
 
 
@@ -60,25 +62,23 @@ colnames(tax_table(clean_data))
 
 
 ```{r}
-#Subset field samples:
-# Just nest samples
+#Subset nest samples
+
 clean_nest <- clean_data %>% subset_samples(!is.na(Host_Taxa) & 
-                                              !is.na(T_cruzi) & 
-                                              Organism == "Triatoma" & Nest != "houseIO" &
-                                              Nest != "bob" & Nest != "LVH" & Origin == "field" &
-                                              T_cruzi == "N") %>% prune_taxa(taxa_sums(.) > 0, .)
+                                              !is.na(Nest) & Nest != "RLShouse" & Nest != "LVhouse") %>% prune_taxa(taxa_sums(.) > 0, .)
 clean_nest
 
 
 
 
 
-
 ```
 
 
 
 ```{r}
+# Set.seed for randomisation, making results reproducible
+set.seed(5)
 ###### Removing low abundance OTUs
 # melt to long format (for ggploting) 
 # prune out low abundance genera
@@ -109,11 +109,8 @@ young <- nest_rarefy %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == 
 
 
 
-
-
-
-```{r setup, include=FALSE}
-########## SECTION 3 - Full visualisation of bacterial taxa #############
+```{r}
+########## Full visualisation of bacterial taxa #############
 #Choose level of taxa
 clean_data_gen<-taxa_level(clean_data, "Genus")
 #normalize the data
