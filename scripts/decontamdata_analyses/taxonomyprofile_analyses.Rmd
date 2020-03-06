@@ -22,16 +22,16 @@ library(ggplot2); packageVersion("ggplot2") #need for plotting graphs
 #upload the input files for analyses
 
 #Read the OTU file
-abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_negative_abund.csv",row.names=1,check.names=FALSE)
+abund_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_negative_abund.csv",row.names=1,check.names=FALSE)#change path for your computer
 
 #transpose the OTU abundance data to have sample names on rows
 abund_table<-t(abund_table)
 
 #Read in the complete meta data file
-meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/fullmeta_negative_28022020.csv",row.names=1,check.names=FALSE)
+meta_table<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/fullmeta_negative_28022020.csv",row.names=1,check.names=FALSE)#change path for your computer
 
 #Read the taxonomy
-OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_negative_taxa.csv",row.names=1,check.names=FALSE)
+OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Originaldata_negative/otu_norarefaction_decontam_negative_taxa.csv",row.names=1,check.names=FALSE)#change path for your computer
 
 #colnames(meta_table)<-c("ReadCount", "Plate", "WellPosition", "Organism", "State",
  #                       "Tcruzi","Host_Taxa", "Instar", "Instar_range", "Sex", "Locality",
