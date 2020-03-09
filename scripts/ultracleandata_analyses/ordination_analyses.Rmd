@@ -10,7 +10,9 @@ output: html_document
 
 library(phyloseq); packageVersion("phyloseq") #need for ordination analyses
 library(ggplot2); packageVersion("ggplot2") #need for plotting graphs
-
+library(dplyr); packageVersion("dplyr") #require to filter and clean up the data
+library(viridis); packageVersion("viridis") #colour package
+library(vegan); packageVersion("vegan") #community analysis
 
 ```
 
@@ -43,23 +45,27 @@ OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultra
 
 
 ```{r}
-###  1.1 - Phyloseq adaptation + cleanup
+#Phyloseq adaptation + cleanup
 #Convert the data to phyloseq format
 OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
 TAX = tax_table(as.matrix(OTU_taxonomy))
 SAM = sample_data(meta_table)
 physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
 
-clean_data<-physeq
-#column names of taxonomy file
-colnames(tax_table(clean_data))
-
 
 
 ```
 
 ```{r}
-# Create some new subsets for later use here:
+
+#subsetting for further analyses
+
+#Subset nest samples
+clean_data <- clean_data %>% subset_samples(!is.na(Host_Taxa) & 
+                                              !is.na(Nest) & Nest != "RLShouse" & Nest != "LVhouse") %>% prune_taxa(taxa_sums(.) > 0, .)
+
+
+# Create some new subsets for later analyses:
 rubida_rarefy <- clean_data %>% subset_samples(Host_Taxa == "Trubida")
 chaparral <- clean_data %>% subset_samples(Locality == "Chaparral")
 tucson <- clean_data %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")

@@ -81,16 +81,6 @@ clean_nest
 # Set.seed for randomisation, making results reproducible
 set.seed(5)
 
-###### Removing low abundance OTUs
-# melt to long format (for ggploting) 
-# prune out low abundance genera
-nest_genus <- clean_nest %>%
-  tax_glom(taxrank = "Genus") %>%                      # agglomerate at genus level
-  transform_sample_counts(function(x) {x/sum(x)} ) %>% # Transform to rel. abundance
-  psmelt() %>%                                         # Melt to long format
-  filter(Abundance > 0.01) %>%                          # Filter out low abundance taxa
-  arrange(Sample)                                      # Arrange alphabetically by sample
-
 # Rarefy reads to even out the depth
 nest_rarefy <- rarefy_even_depth(clean_nest, sample.size = 1000)
 nest_rarefy
