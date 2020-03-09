@@ -45,7 +45,7 @@ OTU_taxonomy<-read.csv("D:/Czech/triatomine_manuscript/MS-Triatominae/data/Ultra
 
 
 ```{r}
-#Phyloseq adaptation + cleanup
+#Phyloseq adaptation
 #Convert the data to phyloseq format
 OTU = otu_table(as.matrix(abund_table), taxa_are_rows = FALSE)
 TAX = tax_table(as.matrix(OTU_taxonomy))
@@ -53,27 +53,18 @@ SAM = sample_data(meta_table)
 physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
 
 
-
 ```
+
 
 ```{r}
 
-#subsetting for further analyses
-
 #Subset nest samples
-clean_data <- clean_data %>% subset_samples(!is.na(Host_Taxa) & 
-                                              !is.na(Nest) & Nest != "RLShouse" & Nest != "LVhouse") %>% prune_taxa(taxa_sums(.) > 0, .)
-
-
-# Create some new subsets for later analyses:
-rubida_rarefy <- clean_data %>% subset_samples(Host_Taxa == "Trubida")
-chaparral <- clean_data %>% subset_samples(Locality == "Chaparral")
-tucson <- clean_data %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")
-young <- clean_data %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "L3")
-
+physeq_nest <- physeq %>% subset_samples(!is.na(Host_Taxa) & 
+                                              Nest != "RLShouse" & Nest != "LVhouse") %>% prune_taxa(taxa_sums(.) > 0, .)
 
 
 ```
+
 
 
 
@@ -83,20 +74,38 @@ young <- clean_data %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "
 # Set.seed for randomisation, making results reproducible
 set.seed(5)
 
+# Rarefy reads to even out the depth
+physeq_nest_rarefy <- rarefy_even_depth(physeq_nest, sample.size = 1000)
 
+
+
+# Create some new subsets for later analyses:
+rubida <- physeq_nest_rarefy %>% subset_samples(Host_Taxa == "Trubida")
+chaparral <- physeq_nest_rarefy %>% subset_samples(Locality == "Chaparral")
+tucson <- physeq_nest_rarefy %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")
+young <- physeq_nest_rarefy %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "L3")
+
+
+
+```
+
+
+
+
+```{r}
 #NMDS analyses for the ontogney 
 
 
 # NMDS on rubida ontogeny
 rubida_nmds <- ordinate(
-  physeq = rubida_rarefy, 
+  physeq = rubida, 
   method = "NMDS", 
   distance = "bray"
 )
 ## Stress = 0.15
 ## Plot it
 rub2<-plot_ordination(
-  physeq = rubida_rarefy,
+  physeq = rubida,
   ordination = rubida_nmds,
   color = "Instar",
   shape = "Instar",
@@ -115,12 +124,12 @@ print(rub2)
 dev.off()
 
 ## PERMANOVA ON ONTOGENY
-rubida_bray <- phyloseq::distance(rubida_rarefy, method = "bray")
-rubida_rarefy_df <- data.frame(sample_data(rubida_rarefy))
-adonis(rubida_bray ~ Instar, data = rubida_rarefy_df, permutations = 999, strata = rubida_rarefy_df$Locality)
+rubida_bray <- phyloseq::distance(rubida, method = "bray")
+rubida_df <- data.frame(sample_data(rubida))
+adonis(rubida_bray ~ Instar, data = rubida_df, permutations = 999, strata = rubida_df$Locality)
 
 #betadispersion
-beta1 <- betadisper(rubida_bray, rubida_rarefy_df$Instar, type = "median", bias.adjust = TRUE)
+beta1 <- betadisper(rubida_bray, rubida_df$Instar, type = "median", bias.adjust = TRUE)
 permutest(beta1, pairwise = TRUE, permutations = 999, model = "direct")
 
 
