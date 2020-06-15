@@ -75,42 +75,42 @@ young <- clean_data %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "
 ```{r}
 ### Species-specific ontogeny
 Rubida <- clean_data %>% subset_samples(Host_Taxa == "Trubida")
-r1 <-plot_anova_diversity(Rubida, method = c("richness", "shannon"), 
+Figure1B <-plot_anova_diversity(Rubida, method = c("richness", "shannon"), 
                           grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r1.pdf",width=8)#change the path for your computer
-print(r1)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/Figure1B.pdf",width=8)#change the path for your computer
+print(Figure1B)
 dev.off()
 
 
 protracta <- clean_data %>% subset_samples(Host_Taxa == "Tprotracta")
-r2 <- plot_anova_diversity(protracta, method = c("richness", "shannon"), 
+Supplementing_Figure_1B_B <- plot_anova_diversity(protracta, method = c("richness", "shannon"), 
                            grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r2.pdf",width=8)#change the path for your computer
-print(r2)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/Supplementing_Figure_1B_B.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_B)
 dev.off()
 
 
 gerst <- clean_data %>%  subset_samples(Host_Taxa == "Tgerstaeckeri")
-r3 <- plot_anova_diversity(gerst, method = c("richness", "shannon"), 
+Supplementing_Figure_1B_A <- plot_anova_diversity(gerst, method = c("richness", "shannon"), 
                            grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r3.pdf",width=8)#change the path for your computer
-print(r3)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/Supplementing_Figure_1B_A.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_A)
 dev.off()
 
 
 lect <- clean_data %>% subset_samples(Host_Taxa == "Tlecticularia")
-r4 <- plot_anova_diversity(lect, method = c("richness", "shannon"),
+Supplementing_Figure_1B_D <- plot_anova_diversity(lect, method = c("richness", "shannon"),
                            grouping_column = "Instar", pValueCutoff = 0.05)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r4.pdf",width=8)#change the path for your computer
-print(r4)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/Supplementing_Figure_1B_D.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_D)
 dev.off()
 
 
 sang <- clean_data %>% subset_samples(Host_Taxa == "Tsanguisuga")
-r5 <- plot_anova_diversity(sang, method = c("richness", "shannon"),
+Supplementing_Figure_1B_C <- plot_anova_diversity(sang, method = c("richness", "shannon"),
                            grouping_column = "Instar", pValueCutoff = 0.1)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/r5.pdf",width=8)#change the path for your computer
-print(r5)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/alphadiversity_analyses/Supplementing_Figure_1B_C.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_C)
 dev.off()
 
 ```

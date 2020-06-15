@@ -77,50 +77,50 @@ lec <- clean_data_barplotgen %>% subset_samples(Host_Taxa == "Tlecticularia")
 nest2 <- clean_data_barplotgen %>% subset_samples(Locality == "Chaparral")
 
 # Rubida only - across instars - genus level
-rubida_gen <- plot_taxa(rubida_ontogeny, grouping_column = "Instar",
+Figure1A <- plot_taxa(rubida_ontogeny, grouping_column = "Instar",
                         method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/rubida_gen.pdf",width=8)#change the path for your computer
-print(rubida_gen)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/Figure1A.pdf",width=8)#change the path for your computer
+print(Figure1A)
 dev.off()
 
 # Gerstaeckeri only - across instars - genus level
-gerst_gen <- plot_taxa(gerst_ontogeny, grouping_column = "Instar",
+Supplementing_Figure_1B_A <- plot_taxa(gerst_ontogeny, grouping_column = "Instar",
                        method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/gerst_gen.pdf",width=8)#change the path for your computer
-print(gerst_gen)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/Supplementing_Figure_1B_A.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_A)
 dev.off()
 
 
 
 ## Protracta ontogeny - genus level
-protra_gen <- plot_taxa(protra_ontogeny, grouping_column = "Instar",
+Supplementing_Figure_1B_B <- plot_taxa(protra_ontogeny, grouping_column = "Instar",
                         method = "hellinger", number.taxa = 20, filename = NULL)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/protra_gen.pdf",width=8)#change the path for your computer
-print(protra_gen)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/Supplementing_Figure_1B_B.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_B)
 dev.off()
 
 
 ## Sanguisuga ontogeny -genus level
-sang_gen <- plot_taxa(sang, grouping_column = "Instar",
+Supplementing_Figure_1B_C <- plot_taxa(sang, grouping_column = "Instar",
                       method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/sang_gen.pdf",width=8)#change the path for your computer
-print(sang_gen)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/Supplementing_Figure_1B_C.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_C)
 dev.off()
 
 
 #Leticularia ontogeny - genus level
-lectic_gen <- plot_taxa(lec, grouping_column = "Instar",
+Supplementing_Figure_1B_D <- plot_taxa(lec, grouping_column = "Instar",
                         method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/letic_gen.pdf",width=8)#change the path for your computer
-print(lectic_gen)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/Supplementing_Figure_1B_D.pdf",width=8)#change the path for your computer
+print(Supplementing_Figure_1B_D)
 dev.off()
 
 # For chaparral nest 2 - species difference - genus level
-nest2gen <- plot_taxa(nest2, grouping_column = "Host_Taxa",
+Figure4 <- plot_taxa(nest2, grouping_column = "Host_Taxa",
                       method = "hellinger", number.taxa = 20, filename = NULL)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/nest2_gen.pdf",width=8)#change the path for your computer
-print(nest2gen)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/taxonomyprofile_analyses/Figure4.pdf",width=8)#change the path for your computer
+print(Figure4)
 dev.off()
 
 

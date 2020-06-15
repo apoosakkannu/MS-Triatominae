@@ -53,14 +53,15 @@ SAM = sample_data(meta_table)
 physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
 
 
+
 ```
 
 
 ```{r}
 
-#Subset nest samples
+#Subset nest samples and remove a outlier sample (TU50i3B3) 
 physeq_nest <- physeq %>% subset_samples(!is.na(Host_Taxa) & 
-                                              Nest != "RLShouse" & Nest != "LVhouse") %>% prune_taxa(taxa_sums(.) > 0, .)
+                                              Nest != "RLShouse" & Nest != "LVhouse" & SampleID != "TU50i3B3") %>% prune_taxa(taxa_sums(.) > 0, .)
 
 
 ```
@@ -104,7 +105,7 @@ rubida_nmds <- ordinate(
 )
 ## Stress = 0.15
 ## Plot it
-rub2<-plot_ordination(
+Figure1C<-plot_ordination(
   physeq = rubida,
   ordination = rubida_nmds,
   color = "Instar",
@@ -119,8 +120,8 @@ rub2<-plot_ordination(
   geom_point(alpha = 1, size = 4) +
   stat_ellipse(geom='polygon', aes(colour=Instar, fill=Instar), alpha = 0.1)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/rub2.pdf",width=8)#change the path for your computer
-print(rub2)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/Figure1C.pdf",width=8)#change the path for your computer
+print(Figure1C)
 dev.off()
 
 ## PERMANOVA ON ONTOGENY
@@ -149,7 +150,7 @@ chap_nmds <- ordinate(
   distance = "bray"
 )
 ## 0.09 stress
-chap2<-plot_ordination(
+Figure4<-plot_ordination(
   physeq = chaparral,
   ordination = chap_nmds,
   color = "Host_Taxa",
@@ -165,8 +166,8 @@ chap2<-plot_ordination(
   geom_text(aes(label=Instar),hjust=1, vjust=0, size=3, colour = "black")+ 
   stat_ellipse(geom='polygon', aes(colour=Host_Taxa, fill=Host_Taxa), alpha = 0.1, level = 0.95)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/chap2.pdf",width=8)#change the path for your computer
-print(chap2)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/Figure4.pdf",width=8)#change the path for your computer
+print(Figure4)
 dev.off()
 
 
@@ -192,7 +193,7 @@ tuc_nmds <- ordinate(
   distance = "bray"
 )
 ## 0.17 stress
-tuc1<-plot_ordination(
+Figure6<-plot_ordination(
   physeq = tucson,
   ordination = tuc_nmds,
   color = "Locality",
@@ -208,8 +209,8 @@ tuc1<-plot_ordination(
   #geom_text(aes(label=Instar),hjust=1, vjust=0, size=3, colour = "black")+ 
   stat_ellipse(geom='polygon', aes(colour=Locality, fill=Locality), alpha = 0.1, level = 0.95)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/tuc1.pdf",width=8)#change the path for your computer
-print(tuc1)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/Figure6.pdf",width=8)#change the path for your computer
+print(Figure6)
 dev.off()
 
 
@@ -238,7 +239,7 @@ young_nmds <- ordinate(
   distance = "bray"
 )
 ### stress = ~0.2
-young1<-plot_ordination(
+Figure3<-plot_ordination(
   physeq = young,
   ordination = young_nmds,
   color = "Host_Taxa",
@@ -253,8 +254,8 @@ young1<-plot_ordination(
   geom_point(alpha = 1, size = 4)+
   stat_ellipse(geom='polygon', aes(colour=Host_Taxa, fill=Host_Taxa), alpha = 0.1, level = 0.95)
 
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/young1.pdf",width=8)#change the path for your computer
-print(young1)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/Figure3.pdf",width=8)#change the path for your computer
+print(Figure3)
 dev.off()
 
 
