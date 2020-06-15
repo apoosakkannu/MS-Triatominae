@@ -1,171 +1,171 @@
-#SampleID,Plate,Well_Position,Index1,Index2,Included in 'ultraclean',Sample Type,T_cruzi,Origin,Host_Taxa,Instar,Instar_range,Host_instarrange,Sex,Engorged,Engorgement,Locality,State,Nest
-2W03A,REP,A4,CCTAACGGTCCA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA
-3W05A,REP,B4,TTCCTTAGTAGT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA
-1W06A,REP,B5,CGTCCGTATGAA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3_4,L3_4,NA,NA,NA,NA,San Antonio,TX,NA
-1L03A,REP,C4,TATGCCAGAGAT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA
-1L04A,REP,D4,ATCTAGTGGCAA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA
-3W07A,REP,D5,ACGCTTAACGAC,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3_4,L3_4,NA,NA,NA,NA,San Antonio,TX,NA
-1L07A,REP,E3,AGTAAAGATCGT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA
-1L05A,REP,E4,CTCGCCCTCGCC,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA
-1L08A,REP,F3,TTGCTGGACGCT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA
-3W08A,REP,F4,TACTAACGCGGT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA
-4L04A,REP,F5,GCGATCACACCT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3,L1_3,sanguisuga_early,NA,yes,NA,San Antonio,TX,NA
-1L09A,REP,G3,TTGCGGACCCTA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA
-3W09A,REP,G4,GTCGTCCAAATG,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA
-4L05A,REP,G5,TGCACAGTCGCT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3,L1_3,sanguisuga_early,NA,no,NA,San Antonio,TX,NA
-4L07A,REP,H5,GTCATGCTCCAG,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3,L1_3,sanguisuga_early,NA,no,NA,San Antonio,TX,NA
-TU64i4A2,1,H6,TACCGAAGGTAT,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,UADS,AZ,nest8
-VM1i6A1,1,C8,CGGTGACCTACT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,yes,1,UADS,AZ,LVhouse
-TU65i3A2,1,A7,TACAATATCTGT,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8
-TU4i3A3,1,B1,CGTATAAATGCG,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest2
-VM2i6A1,1,D8,CTTAGTGCAGAA,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,yes,1,UADS,AZ,LVhouse
-TU5i4A1,1,C1,TGACTAATGGCC,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,1,UADS,AZ,nest2
-TU67i3A2,1,C7,TGATATCGTCTT,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8
-VM4i6A1,1,F8,TGAGTGGTCTGT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,yes,1,UADS,AZ,LVhouse
-TU54i4A3,2,B10,CAAGTGAAGGGA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest7
-TU54i4B2,2,C10,CTTGATTCTTGA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,UADS,AZ,nest7
-VM5i6A1,1,G8,TAACAATAATTC,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,yes,1,UADS,AZ,LVhouse
-TU55i4A1,2,D10,AGGATCAGGGAA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7
-TU55i4B1,2,E10,ACTTGGTGTAAG,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7
-TU55i4C1,2,F10,ACGACGCATTTG,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7
-TU8i6A0,1,F1,TGTGCACGCCAT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,no,0,UADS,AZ,RLShouse
-TU55i4D1,2,G10,GCTCGAAGATTC,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7
-TU47i4A3,1,F5,GCGATCACACCT,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest6
-TU17i6A0,1,G2,TAAATATACCCT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,no,0,UADS,AZ,RLShouse
-TU48i4A1,1,G5,TGCACAGTCGCT,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest6
-TU10i6A0,1,H1,CTATGTATTAGT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,no,0,UADS,AZ,RLShouse
-LC32i5A1,1,C11,GAAATCTTGAAG,TGGATA,yes,Triatoma,N,field,Trubida,L5,L4_6,rubida_late,NA,yes,1,LCNCA,AZ,nest5
-TU40i3A3,2,A9,GACTCAACCAGT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest4
-LC26i6A1,1,F10,ACGACGCATTTG,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,yes,1,LCNCA,AZ,nest4
-TU50i3C3,2,A10,GCCTCTACGTCG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest6
-TU56i3B3,2,A11,ACTACTGAGGAT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7
-TU60i2C3,2,A12,AATTCACCTCCT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7
-TU30i3A3,2,B7,GGTTGCCCTGTA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3
-TU40i3B3,2,B9,GCCTATGAGATC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest4
-TU38i4A2,1,H4,GACTCTGCTCAG,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,UADS,AZ,nest4
-TU56i3C3,2,B11,CACGTTTATTCC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7
-TU60i2D2,2,B12,TAATCGGTGCCA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest7
-TU57i3A1,2,C11,GAAATCTTGAAG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,1,UADS,AZ,nest7
-TU41i3B2,2,D9,AATCTTGCGCCG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest4
-TU57i3B1,2,D11,AATAACTAGGGT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,1,UADS,AZ,nest7
-TU30i3D3,2,E7,GTTGATACGATG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3
-TU36i4B3,2,A8,AATTTAGGTAGG,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4
-TU68i2C2,2,E12,CACGCAGTCTAC,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8
-TU36i4C3,2,B8,CATATAGCCCGA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4
-TU30i3E3,2,F7,GAAGAGGGTTGA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3
-TU68i2D2,2,F12,AGAGCCAAGAGC,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8
-TU30i3F3,2,G7,GGTTCATGAACA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3
-TU60i2A3,2,G11,TATTTGATTGGT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7
-TU50i3B3,2,H9,GAACCAGTACTC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest6
-TU37i4A3,2,C8,CGGTGACCTACT,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4
-TU60i2B3,2,H11,GTGCCATAATCG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7
-TU37i4B3,2,D8,CTTAGTGCAGAA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4
-LC1i1A2,2,A1,AGCCTTCGTCGC,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC2i2E1,2,A2,TCCATACCGGAA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest1
-LC4i1C0,2,A3,AGCCCTGCTACA,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1
-LC11i2C1,2,A5,CGCGCCTTAAAC,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest2
-LC28i2C2,2,A6,TATGGTACCCAG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest4
-LC1i1B2,2,B1,CGTATAAATGCG,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-TU39i4B1,2,G8,TAACAATAATTC,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest4
-TU36i4A3,2,H7,TGAGTATGAGTA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4
-LC11i2D1,2,B5,CGTCCGTATGAA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest2
-LC33i2A3,2,B6,ACGTGAGGAACG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest5
-LC1i1C0,2,C1,TGACTAATGGCC,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1
-LC5i1B3,2,C3,CTGTCTATACTA,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest1
-TU39i4C1,2,H8,AATGGTTCAGCA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest4
-LC17i6A1,1,E9,TGAGACCCTACA,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,yes,1,LCNCA,AZ,nest3
-LC13i3A3,2,C5,CGTTTGGAATGA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest2
-LC33i2B3,2,C6,AAGAACTCATGA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest5
-LC1i1D0,2,D1,GTGGAGTCTCAT,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1
-LC3i3B2,2,D2,ACCTTACACCTT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC16i5A1,1,D9,AATCTTGCGCCG,TGGATA,yes,Triatoma,N,field,Trubida,L5,L4_6,rubida_late,NA,yes,1,LCNCA,AZ,nest2
-LC14i4A2,2,E5,TCTCTTTCGACA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,LCNCA,AZ,nest2
-LC13i3B3,2,D5,ACGCTTAACGAC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest2
-LC33i2C3,2,D6,TACGGATTATGG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest5
-LC2i2A2,2,E1,TGATGTGCTAAG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC5i1D3,2,E3,AGTAAAGATCGT,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest1
-LC7i2A2,2,F3,TTGCTGGACGCT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC14i4B1,2,F5,GCGATCACACCT,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,LCNCA,AZ,nest2
-LC2i2C2,2,G1,GGTGAGCAAGCA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-TU2i4A3,2,F6,CAAACGCACTAA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest2
-LC4i1A0,2,G2,TAAATATACCCT,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1
-LC7i2B2,2,G3,TTGCGGACCCTA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC11i2A1,2,G4,GTCGTCCAAATG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest2
-LC28i2A1,2,G5,TGCACAGTCGCT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest4
-LC2i2D2,2,H1,CTATGTATTAGT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC4i1B0,2,H2,ACTCCCGTGTGA,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1
-TU74i4A1,1,G7,GGTTCATGAACA,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest11
-TU1i4A3,1,A1,AGCCTTCGTCGC,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest1
-LC7i2C2,2,H3,CGGTATAGCAAT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1
-LC28i2B2,2,H5,GTCATGCTCCAG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest4
-TU52i6A3,1,A6,TATGGTACCCAG,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,3,UADS,AZ,nest7
-LC9i6A1,1,A9,GACTCAACCAGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,LCNCA,AZ,nest2
-LC21i6A1,1,A10,GCCTCTACGTCG,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,LCNCA,AZ,nest3
-TU53i6A0,1,B6,ACGTGAGGAACG,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,no,0,UADS,AZ,nest7
-TU31i6A2,1,C4,TATGCCAGAGAT,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,2,UADS,AZ,nest4
-TU69i6A1,1,D7,ATACATGCAAGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,UADS,AZ,nest9
-LC18i6A2,1,F9,TTACACAAAGGC,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,male,yes,2,LCNCA,AZ,nest3
-LC19i6A0,1,G9,CTTATTAAACGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,male,no,0,LCNCA,AZ,nest3
-LC27i6A1,1,G10,GCTCGAAGATTC,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,LCNCA,AZ,nest4
-LC20i6A0,1,H9,GAACCAGTACTC,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,male,no,0,LCNCA,AZ,nest3
-2CH06G,REP,A8,AATTTAGGTAGG,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,NA,2,Chaparral,TX,nest2
-2CH07G,REP,B8,CATATAGCCCGA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,yes,3,Chaparral,TX,nest2
-2CH46A,REP,A9,GACTCAACCAGT,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L2,L1_3,leticularia_early,NA,NA,NA,Chaparral,TX,nest2
-2CH36G,REP,D8,CTTAGTGCAGAA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,NA,2,Chaparral,TX,nest2
-2CH45G,REP,E8,GTCAACGCTGTC,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,yes,3,Chaparral,TX,nest2
-2CH42G,REP,F7,GAAGAGGGTTGA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L4,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2
-2CH43G,REP,G7,GGTTCATGAACA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L4,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2
-2CH44G,REP,H7,TGAGTATGAGTA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L4,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2
-2CH39G,REP,C7,TGATATCGTCTT,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L5,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2
-2CH28G,REP,B7,GGTTGCCCTGTA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L6,L4_6,leticularia_late,male,NA,3,Chaparral,TX,nest2
-2CH02G,REP,F6,CAAACGCACTAA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L6,L4_6,leticularia_late,male,NA,2,Chaparral,TX,nest2
-2CH14A,REP,G8,TAACAATAATTC,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L2,L1_3,leticularia_early,NA,NA,NA,Chaparral,TX,nest2
-2CH35A,REP,H8,AATGGTTCAGCA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L2,L1_3,leticularia_early,NA,NA,NA,Chaparral,TX,nest2
-4W06A,REP,A3,AGCCCTGCTACA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,San Antonio,TX,NA
-2CH22G,REP,A10,GCCTCTACGTCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,2,Chaparral,TX,nest2
-2CH13A,REP,A11,ACTACTGAGGAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2
-2CH48A,REP,A12,AATTCACCTCCT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-1L06A,REP,B1,CGTATAAATGCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L4,L4_6,gerstaeckeri_late,NA,no,NA,San Antonio,TX,NA
-2CH15A,REP,B11,CACGTTTATTCC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2
-1L10A,REP,C1,TGACTAATGGCC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L5,L4_6,gerstaeckeri_late,NA,no,NA,San Antonio,TX,NA
-1L02A,REP,C6,AAGAACTCATGA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA
-2CH32G,REP,C10,CTTGATTCTTGA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,2,Chaparral,TX,nest2
-2CH24A,REP,C11,GAAATCTTGAAG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-2CH05A,REP,C12,GAGATACAGTTC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2
-1L14A,REP,D1,GTGGAGTCTCAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA
-2CH49G,REP,D9,AATCTTGCGCCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L5,L4_6,gerstaeckeri_late,NA,yes,4,Chaparral,TX,nest2
-2CH37A,REP,E11,ATTACGTATCAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,no,NA,Chaparral,TX,nest2
-3L01A,REP,F1,TGTGCACGCCAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA
-4W02A,REP,F2,CCGGACAAGAAG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2_3,L1_3,gerstaeckeri_early,NA,NA,NA,San Antonio,TX,NA
-2CH08A,REP,F10,ACGACGCATTTG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-2CH55A,REP,F11,TATCCAAGCGCA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-3L02A,REP,G1,GGTGAGCAAGCA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA
-2CH19G,REP,G9,CTTATTAAACGT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,2,Chaparral,TX,nest2
-2CH10A,REP,G10,GCTCGAAGATTC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-2CH56A,REP,G11,TATTTGATTGGT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-3L03A,REP,H1,CTATGTATTAGT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA
-4W04A,REP,H2,ACTCCCGTGTGA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2_3,L1_3,gerstaeckeri_early,NA,NA,NA,San Antonio,TX,NA
-2CH20G,REP,H9,GAACCAGTACTC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,0,Chaparral,TX,nest2
-2CH11A,REP,H10,CGCACCCATACA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2
-2CH12A,REP,H11,GTGCCATAATCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2
-TU28i5A1,1,B4,TTCCTTAGTAGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest3
-TU66i3A1,1,B7,GGTTGCCCTGTA,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,1,UADS,AZ,nest8
-LC22i5A3,1,B10,CAAGTGAAGGGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,3,LCNCA,AZ,nest3
-TU58i3A1,1,C6,AAGAACTCATGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,1,UADS,AZ,nest7
-LC23i4A3,1,C10,CTTGATTCTTGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,3,LCNCA,AZ,nest3
-TU59i3A3,1,D6,TACGGATTATGG,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,3,UADS,AZ,nest7
-LC24i5A3,1,D10,AGGATCAGGGAA,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,3,LCNCA,AZ,nest3
-LC34i5A1,1,D11,AATAACTAGGGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,LCNCA,AZ,nest5
-TU71i5A1,1,E7,GTTGATACGATG,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest10
-LC25i5A1,1,E10,ACTTGGTGTAAG,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,LCNCA,AZ,nest3
-TU62i3A2,1,F6,CAAACGCACTAA,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,UADS,AZ,nest7
-LC36i4A1,1,F11,TATCCAAGCGCA,TGGATA,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,1,LCNCA,AZ,nest5
-TU35i5A1,1,G4,GTCGTCCAAATG,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest4
-SP1i4A2,1,H8,AATGGTTCAGCA,TGGATA,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,2,SPRNCA,AZ,nest1
-LC3i3A2,2,C2,CGGGACACCCGA,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1
-LC3i3C2,2,E2,GTAGTAGACCAT,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1
-TU49i4A2,2,E9,TGAGACCCTACA,TATCAG,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,2,UADS,AZ,nest6
-LC2i2B2,2,F1,TGTGCACGCCAT,TATCAG,yes,Triatoma,N,field,Tprotracta,L2,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1
-LC3i3D2,2,F2,CCGGACAAGAAG,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1
-TU49i4B1,2,F9,TTACACAAAGGC,TATCAG,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest6
-TU50i3A3,2,G9,CTTATTAAACGT,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,3,UADS,AZ,nest6
+#SampleID,Plate,Well_Position,Index1,Index2,Included in 'ultraclean',Sample Type,T_cruzi,Origin,Host_Taxa,Instar,Instar_range,Host_instarrange,Sex,Engorged,Engorgement,Locality,State,Nest,SampleID
+2W03A,REP,A4,CCTAACGGTCCA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA,2W03A
+3W05A,REP,B4,TTCCTTAGTAGT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA,3W05A
+1W06A,REP,B5,CGTCCGTATGAA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3_4,L3_4,NA,NA,NA,NA,San Antonio,TX,NA,1W06A
+1L03A,REP,C4,TATGCCAGAGAT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA,1L03A
+1L04A,REP,D4,ATCTAGTGGCAA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA,1L04A
+3W07A,REP,D5,ACGCTTAACGAC,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3_4,L3_4,NA,NA,NA,NA,San Antonio,TX,NA,3W07A
+1L07A,REP,E3,AGTAAAGATCGT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA,1L07A
+1L05A,REP,E4,CTCGCCCTCGCC,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA,1L05A
+1L08A,REP,F3,TTGCTGGACGCT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA,1L08A
+3W08A,REP,F4,TACTAACGCGGT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA,3W08A
+4L04A,REP,F5,GCGATCACACCT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3,L1_3,sanguisuga_early,NA,yes,NA,San Antonio,TX,NA,4L04A
+1L09A,REP,G3,TTGCGGACCCTA,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L5,L4_6,sanguisuga_late,NA,no,NA,San Antonio,TX,NA,1L09A
+3W09A,REP,G4,GTCGTCCAAATG,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L4,L4_6,sanguisuga_late,NA,NA,NA,San Antonio,TX,NA,3W09A
+4L05A,REP,G5,TGCACAGTCGCT,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3,L1_3,sanguisuga_early,NA,no,NA,San Antonio,TX,NA,4L05A
+4L07A,REP,H5,GTCATGCTCCAG,TTGGTC,yes,Triatoma,N,field,Tsanguisuga,L3,L1_3,sanguisuga_early,NA,no,NA,San Antonio,TX,NA,4L07A
+TU64i4A2,1,H6,TACCGAAGGTAT,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,UADS,AZ,nest8,TU64i4A2
+VM1i6A1,1,C8,CGGTGACCTACT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,yes,1,UADS,AZ,LVhouse,VM1i6A1
+TU65i3A2,1,A7,TACAATATCTGT,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8,TU65i3A2
+TU4i3A3,1,B1,CGTATAAATGCG,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest2,TU4i3A3
+VM2i6A1,1,D8,CTTAGTGCAGAA,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,yes,1,UADS,AZ,LVhouse,VM2i6A1
+TU5i4A1,1,C1,TGACTAATGGCC,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,1,UADS,AZ,nest2,TU5i4A1
+TU67i3A2,1,C7,TGATATCGTCTT,TGGATA,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8,TU67i3A2
+VM4i6A1,1,F8,TGAGTGGTCTGT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,yes,1,UADS,AZ,LVhouse,VM4i6A1
+TU54i4A3,2,B10,CAAGTGAAGGGA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest7,TU54i4A3
+TU54i4B2,2,C10,CTTGATTCTTGA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,UADS,AZ,nest7,TU54i4B2
+VM5i6A1,1,G8,TAACAATAATTC,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,yes,1,UADS,AZ,LVhouse,VM5i6A1
+TU55i4A1,2,D10,AGGATCAGGGAA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7,TU55i4A1
+TU55i4B1,2,E10,ACTTGGTGTAAG,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7,TU55i4B1
+TU55i4C1,2,F10,ACGACGCATTTG,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7,TU55i4C1
+TU8i6A0,1,F1,TGTGCACGCCAT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,no,0,UADS,AZ,RLShouse,TU8i6A0
+TU55i4D1,2,G10,GCTCGAAGATTC,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest7,TU55i4D1
+TU47i4A3,1,F5,GCGATCACACCT,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest6,TU47i4A3
+TU17i6A0,1,G2,TAAATATACCCT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,no,0,UADS,AZ,RLShouse,TU17i6A0
+TU48i4A1,1,G5,TGCACAGTCGCT,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest6,TU48i4A1
+TU10i6A0,1,H1,CTATGTATTAGT,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,male,no,0,UADS,AZ,RLShouse,TU10i6A0
+LC32i5A1,1,C11,GAAATCTTGAAG,TGGATA,yes,Triatoma,N,field,Trubida,L5,L4_6,rubida_late,NA,yes,1,LCNCA,AZ,nest5,LC32i5A1
+TU40i3A3,2,A9,GACTCAACCAGT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest4,TU40i3A3
+LC26i6A1,1,F10,ACGACGCATTTG,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,yes,1,LCNCA,AZ,nest4,LC26i6A1
+TU50i3C3,2,A10,GCCTCTACGTCG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest6,TU50i3C3
+TU56i3B3,2,A11,ACTACTGAGGAT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7,TU56i3B3
+TU60i2C3,2,A12,AATTCACCTCCT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7,TU60i2C3
+TU30i3A3,2,B7,GGTTGCCCTGTA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3,TU30i3A3
+TU40i3B3,2,B9,GCCTATGAGATC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest4,TU40i3B3
+TU38i4A2,1,H4,GACTCTGCTCAG,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,UADS,AZ,nest4,TU38i4A2
+TU56i3C3,2,B11,CACGTTTATTCC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7,TU56i3C3
+TU60i2D2,2,B12,TAATCGGTGCCA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest7,TU60i2D2
+TU57i3A1,2,C11,GAAATCTTGAAG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,1,UADS,AZ,nest7,TU57i3A1
+TU41i3B2,2,D9,AATCTTGCGCCG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest4,TU41i3B2
+TU57i3B1,2,D11,AATAACTAGGGT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,1,UADS,AZ,nest7,TU57i3B1
+TU30i3D3,2,E7,GTTGATACGATG,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3,TU30i3D3
+TU36i4B3,2,A8,AATTTAGGTAGG,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4,TU36i4B3
+TU68i2C2,2,E12,CACGCAGTCTAC,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8,TU68i2C2
+TU36i4C3,2,B8,CATATAGCCCGA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4,TU36i4C3
+TU30i3E3,2,F7,GAAGAGGGTTGA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3,TU30i3E3
+TU68i2D2,2,F12,AGAGCCAAGAGC,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,UADS,AZ,nest8,TU68i2D2
+TU30i3F3,2,G7,GGTTCATGAACA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest3,TU30i3F3
+TU60i2A3,2,G11,TATTTGATTGGT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7,TU60i2A3
+TU50i3B3,2,H9,GAACCAGTACTC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest6,TU50i3B3
+TU37i4A3,2,C8,CGGTGACCTACT,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4,TU37i4A3
+TU60i2B3,2,H11,GTGCCATAATCG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,UADS,AZ,nest7,TU60i2B3
+TU37i4B3,2,D8,CTTAGTGCAGAA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4,TU37i4B3
+LC1i1A2,2,A1,AGCCTTCGTCGC,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC1i1A2
+LC2i2E1,2,A2,TCCATACCGGAA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest1,LC2i2E1
+LC4i1C0,2,A3,AGCCCTGCTACA,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1,LC4i1C0
+LC11i2C1,2,A5,CGCGCCTTAAAC,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest2,LC11i2C1
+LC28i2C2,2,A6,TATGGTACCCAG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest4,LC28i2C2
+LC1i1B2,2,B1,CGTATAAATGCG,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC1i1B2
+TU39i4B1,2,G8,TAACAATAATTC,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest4,TU39i4B1
+TU36i4A3,2,H7,TGAGTATGAGTA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest4,TU36i4A3
+LC11i2D1,2,B5,CGTCCGTATGAA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest2,LC11i2D1
+LC33i2A3,2,B6,ACGTGAGGAACG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest5,LC33i2A3
+LC1i1C0,2,C1,TGACTAATGGCC,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1,LC1i1C0
+LC5i1B3,2,C3,CTGTCTATACTA,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest1,LC5i1B3
+TU39i4C1,2,H8,AATGGTTCAGCA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest4,TU39i4C1
+LC17i6A1,1,E9,TGAGACCCTACA,TGGATA,yes,Triatoma,N,field,Trubida,L6,L4_6,rubida_late,female,yes,1,LCNCA,AZ,nest3,LC17i6A1
+LC13i3A3,2,C5,CGTTTGGAATGA,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest2,LC13i3A3
+LC33i2B3,2,C6,AAGAACTCATGA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest5,LC33i2B3
+LC1i1D0,2,D1,GTGGAGTCTCAT,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1,LC1i1D0
+LC3i3B2,2,D2,ACCTTACACCTT,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC3i3B2
+LC16i5A1,1,D9,AATCTTGCGCCG,TGGATA,yes,Triatoma,N,field,Trubida,L5,L4_6,rubida_late,NA,yes,1,LCNCA,AZ,nest2,LC16i5A1
+LC14i4A2,2,E5,TCTCTTTCGACA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,2,LCNCA,AZ,nest2,LC14i4A2
+LC13i3B3,2,D5,ACGCTTAACGAC,TATCAG,yes,Triatoma,N,field,Trubida,L3,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest2,LC13i3B3
+LC33i2C3,2,D6,TACGGATTATGG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest5,LC33i2C3
+LC2i2A2,2,E1,TGATGTGCTAAG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC2i2A2
+LC5i1D3,2,E3,AGTAAAGATCGT,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,yes,3,LCNCA,AZ,nest1,LC5i1D3
+LC7i2A2,2,F3,TTGCTGGACGCT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC7i2A2
+LC14i4B1,2,F5,GCGATCACACCT,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,LCNCA,AZ,nest2,LC14i4B1
+LC2i2C2,2,G1,GGTGAGCAAGCA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC2i2C2
+TU2i4A3,2,F6,CAAACGCACTAA,TATCAG,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest2,TU2i4A3
+LC4i1A0,2,G2,TAAATATACCCT,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1,LC4i1A0
+LC7i2B2,2,G3,TTGCGGACCCTA,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC7i2B2
+LC11i2A1,2,G4,GTCGTCCAAATG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest2,LC11i2A1
+LC28i2A1,2,G5,TGCACAGTCGCT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,1,LCNCA,AZ,nest4,LC28i2A1
+LC2i2D2,2,H1,CTATGTATTAGT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC2i2D2
+LC4i1B0,2,H2,ACTCCCGTGTGA,TATCAG,yes,Triatoma,N,field,Trubida,L1,L1_3,rubida_early,NA,no,0,LCNCA,AZ,nest1,LC4i1B0
+TU74i4A1,1,G7,GGTTCATGAACA,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,1,UADS,AZ,nest11,TU74i4A1
+TU1i4A3,1,A1,AGCCTTCGTCGC,TGGATA,yes,Triatoma,N,field,Trubida,L4,L4_6,rubida_late,NA,yes,3,UADS,AZ,nest1,TU1i4A3
+LC7i2C2,2,H3,CGGTATAGCAAT,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest1,LC7i2C2
+LC28i2B2,2,H5,GTCATGCTCCAG,TATCAG,yes,Triatoma,N,field,Trubida,L2,L1_3,rubida_early,NA,yes,2,LCNCA,AZ,nest4,LC28i2B2
+TU52i6A3,1,A6,TATGGTACCCAG,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,3,UADS,AZ,nest7,TU52i6A3
+LC9i6A1,1,A9,GACTCAACCAGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,LCNCA,AZ,nest2,LC9i6A1
+LC21i6A1,1,A10,GCCTCTACGTCG,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,LCNCA,AZ,nest3,LC21i6A1
+TU53i6A0,1,B6,ACGTGAGGAACG,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,no,0,UADS,AZ,nest7,TU53i6A0
+TU31i6A2,1,C4,TATGCCAGAGAT,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,2,UADS,AZ,nest4,TU31i6A2
+TU69i6A1,1,D7,ATACATGCAAGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,UADS,AZ,nest9,TU69i6A1
+LC18i6A2,1,F9,TTACACAAAGGC,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,male,yes,2,LCNCA,AZ,nest3,LC18i6A2
+LC19i6A0,1,G9,CTTATTAAACGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,male,no,0,LCNCA,AZ,nest3,LC19i6A0
+LC27i6A1,1,G10,GCTCGAAGATTC,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,female,yes,1,LCNCA,AZ,nest4,LC27i6A1
+LC20i6A0,1,H9,GAACCAGTACTC,TGGATA,yes,Triatoma,N,field,Tprotracta,L6,L4_6,protracta_late,male,no,0,LCNCA,AZ,nest3,LC20i6A0
+2CH06G,REP,A8,AATTTAGGTAGG,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,NA,2,Chaparral,TX,nest2,2CH06G
+2CH07G,REP,B8,CATATAGCCCGA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,yes,3,Chaparral,TX,nest2,2CH07G
+2CH46A,REP,A9,GACTCAACCAGT,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L2,L1_3,leticularia_early,NA,NA,NA,Chaparral,TX,nest2,2CH46A
+2CH36G,REP,D8,CTTAGTGCAGAA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,NA,2,Chaparral,TX,nest2,2CH36G
+2CH45G,REP,E8,GTCAACGCTGTC,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L3,L1_3,leticularia_early,NA,yes,3,Chaparral,TX,nest2,2CH45G
+2CH42G,REP,F7,GAAGAGGGTTGA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L4,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2,2CH42G
+2CH43G,REP,G7,GGTTCATGAACA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L4,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2,2CH43G
+2CH44G,REP,H7,TGAGTATGAGTA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L4,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2,2CH44G
+2CH39G,REP,C7,TGATATCGTCTT,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L5,L4_6,leticularia_late,NA,yes,3,Chaparral,TX,nest2,2CH39G
+2CH28G,REP,B7,GGTTGCCCTGTA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L6,L4_6,leticularia_late,male,NA,3,Chaparral,TX,nest2,2CH28G
+2CH02G,REP,F6,CAAACGCACTAA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L6,L4_6,leticularia_late,male,NA,2,Chaparral,TX,nest2,2CH02G
+2CH14A,REP,G8,TAACAATAATTC,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L2,L1_3,leticularia_early,NA,NA,NA,Chaparral,TX,nest2,2CH14A
+2CH35A,REP,H8,AATGGTTCAGCA,TTGGTC,yes,Triatoma,N,field,Tlecticularia,L2,L1_3,leticularia_early,NA,NA,NA,Chaparral,TX,nest2,2CH35A
+4W06A,REP,A3,AGCCCTGCTACA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,San Antonio,TX,NA,4W06A
+2CH22G,REP,A10,GCCTCTACGTCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,2,Chaparral,TX,nest2,2CH22G
+2CH13A,REP,A11,ACTACTGAGGAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2,2CH13A
+2CH48A,REP,A12,AATTCACCTCCT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH48A
+1L06A,REP,B1,CGTATAAATGCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L4,L4_6,gerstaeckeri_late,NA,no,NA,San Antonio,TX,NA,1L06A
+2CH15A,REP,B11,CACGTTTATTCC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2,2CH15A
+1L10A,REP,C1,TGACTAATGGCC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L5,L4_6,gerstaeckeri_late,NA,no,NA,San Antonio,TX,NA,1L10A
+1L02A,REP,C6,AAGAACTCATGA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA,1L02A
+2CH32G,REP,C10,CTTGATTCTTGA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,2,Chaparral,TX,nest2,2CH32G
+2CH24A,REP,C11,GAAATCTTGAAG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH24A
+2CH05A,REP,C12,GAGATACAGTTC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2,2CH05A
+1L14A,REP,D1,GTGGAGTCTCAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA,1L14A
+2CH49G,REP,D9,AATCTTGCGCCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L5,L4_6,gerstaeckeri_late,NA,yes,4,Chaparral,TX,nest2,2CH49G
+2CH37A,REP,E11,ATTACGTATCAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,no,NA,Chaparral,TX,nest2,2CH37A
+3L01A,REP,F1,TGTGCACGCCAT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA,3L01A
+4W02A,REP,F2,CCGGACAAGAAG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2_3,L1_3,gerstaeckeri_early,NA,NA,NA,San Antonio,TX,NA,4W02A
+2CH08A,REP,F10,ACGACGCATTTG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH08A
+2CH55A,REP,F11,TATCCAAGCGCA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH55A
+3L02A,REP,G1,GGTGAGCAAGCA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA,3L02A
+2CH19G,REP,G9,CTTATTAAACGT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,2,Chaparral,TX,nest2,2CH19G
+2CH10A,REP,G10,GCTCGAAGATTC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH10A
+2CH56A,REP,G11,TATTTGATTGGT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH56A
+3L03A,REP,H1,CTATGTATTAGT,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,no,NA,San Antonio,TX,NA,3L03A
+4W04A,REP,H2,ACTCCCGTGTGA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2_3,L1_3,gerstaeckeri_early,NA,NA,NA,San Antonio,TX,NA,4W04A
+2CH20G,REP,H9,GAACCAGTACTC,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L3,L1_3,gerstaeckeri_early,NA,NA,0,Chaparral,TX,nest2,2CH20G
+2CH11A,REP,H10,CGCACCCATACA,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L2,L1_3,gerstaeckeri_early,NA,NA,NA,Chaparral,TX,nest2,2CH11A
+2CH12A,REP,H11,GTGCCATAATCG,TTGGTC,yes,Triatoma,N,field,Tgerstaeckeri,L1,L1_3,gerstaeckeri_early,NA,yes,NA,Chaparral,TX,nest2,2CH12A
+TU28i5A1,1,B4,TTCCTTAGTAGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest3,TU28i5A1
+TU66i3A1,1,B7,GGTTGCCCTGTA,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,1,UADS,AZ,nest8,TU66i3A1
+LC22i5A3,1,B10,CAAGTGAAGGGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,3,LCNCA,AZ,nest3,LC22i5A3
+TU58i3A1,1,C6,AAGAACTCATGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,1,UADS,AZ,nest7,TU58i3A1
+LC23i4A3,1,C10,CTTGATTCTTGA,TGGATA,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,3,LCNCA,AZ,nest3,LC23i4A3
+TU59i3A3,1,D6,TACGGATTATGG,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,3,UADS,AZ,nest7,TU59i3A3
+LC24i5A3,1,D10,AGGATCAGGGAA,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,3,LCNCA,AZ,nest3,LC24i5A3
+LC34i5A1,1,D11,AATAACTAGGGT,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,LCNCA,AZ,nest5,LC34i5A1
+TU71i5A1,1,E7,GTTGATACGATG,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest10,TU71i5A1
+LC25i5A1,1,E10,ACTTGGTGTAAG,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,LCNCA,AZ,nest3,LC25i5A1
+TU62i3A2,1,F6,CAAACGCACTAA,TGGATA,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,UADS,AZ,nest7,TU62i3A2
+LC36i4A1,1,F11,TATCCAAGCGCA,TGGATA,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,1,LCNCA,AZ,nest5,LC36i4A1
+TU35i5A1,1,G4,GTCGTCCAAATG,TGGATA,yes,Triatoma,N,field,Tprotracta,L5,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest4,TU35i5A1
+SP1i4A2,1,H8,AATGGTTCAGCA,TGGATA,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,2,SPRNCA,AZ,nest1,SP1i4A2
+LC3i3A2,2,C2,CGGGACACCCGA,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1,LC3i3A2
+LC3i3C2,2,E2,GTAGTAGACCAT,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1,LC3i3C2
+TU49i4A2,2,E9,TGAGACCCTACA,TATCAG,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,2,UADS,AZ,nest6,TU49i4A2
+LC2i2B2,2,F1,TGTGCACGCCAT,TATCAG,yes,Triatoma,N,field,Tprotracta,L2,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1,LC2i2B2
+LC3i3D2,2,F2,CCGGACAAGAAG,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,2,LCNCA,AZ,nest1,LC3i3D2
+TU49i4B1,2,F9,TTACACAAAGGC,TATCAG,yes,Triatoma,N,field,Tprotracta,L4,L4_6,protracta_late,NA,yes,1,UADS,AZ,nest6,TU49i4B1
+TU50i3A3,2,G9,CTTATTAAACGT,TATCAG,yes,Triatoma,N,field,Tprotracta,L3,L1_3,protracta_early,NA,yes,3,UADS,AZ,nest6,TU50i3A3
