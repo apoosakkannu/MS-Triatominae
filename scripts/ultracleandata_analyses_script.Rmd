@@ -52,8 +52,9 @@ SAM = sample_data(meta_table)
 physeq<-merge_phyloseq(phyloseq(OTU, TAX),SAM)
 
 clean_data<-physeq
-#column names of taxonomy file
-colnames(tax_table(clean_data))
+
+#remove the outlier sample from phyloseq object 
+clean_data<-subset_samples(clean_data, SampleID != "TU50i3B3")
 
 
 # Set.seed for randomisation, making results reproducible
@@ -133,7 +134,7 @@ chaparral <- clean_data %>% subset_samples(Locality == "Chaparral")
 tucson <- clean_data %>% subset_samples(Locality == "UADS" | Locality == "LCNCA")
 young <- clean_data %>% subset_samples(Instar == "L1"|Instar == "L2"|Instar == "L3")
 Instar_range <- clean_data %>% subset_samples(Instar_range == "L1_3"|Instar_range == "L4_6")
-
+rubida_UADSnest_young <- clean_data %>% subset_samples(Host_Taxa == "Trubida" & House == "nest" & Instar_range == "L1_3" & Locality == "UADS" & Nest != "nest6")
 
 # NMDS on rubida ontogeny
 rubida_nmds <- ordinate(
@@ -302,6 +303,38 @@ print(Additional_File_5<-boxplot(mod))
 dev.off()
 
 
+#make a subset of young rubida from UADS nest samples
+
+
+
+## NMDS on young rubida from UADS nest samples
+rubida_UADSnest_young_nmds <- ordinate(
+  physeq = rubida_UADSnest_young, 
+  method = "NMDS", 
+  distance = "bray"
+)
+
+#plotting
+Additional_File_6<-plot_ordination(
+  physeq = rubida_UADSnest_young,
+  ordination = rubida_UADSnest_young_nmds,
+  color = "Nest",
+  shape = "Nest",
+  title = "NMDS of rubida in UADS nest samples") + 
+  scale_color_viridis(option = "plasma", discrete = TRUE, begin = 0.2, end = 0.9)+
+  theme(panel.grid.major = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        panel.grid.minor = element_line(size = 0.02, linetype = 'solid', colour = "black"),
+        plot.background=element_rect(fill = "white"),
+        panel.background = element_rect(fill = 'white'),
+        axis.line = element_line(colour = "black"),) +
+  geom_point(alpha = 1, size = 4)+
+  stat_ellipse(geom='polygon', aes(colour=Nest, fill=observed), alpha = 0.5, level = 0.95)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultradata_analyses/ordination_analyses/Additional_File_6.pdf",width=8)#change the path for your computer
+print(Additional_File_6)
+dev.off()
+
+
+
 ```
 
 #Taxonomy profile for each host taxa
@@ -375,7 +408,5 @@ dev.off()
 
 
 ```
-
-
 
 
