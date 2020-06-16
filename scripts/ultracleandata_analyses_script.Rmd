@@ -328,8 +328,8 @@ Additional_File_6<-plot_ordination(
         panel.background = element_rect(fill = 'white'),
         axis.line = element_line(colour = "black"),) +
   geom_point(alpha = 1, size = 4)+
-  stat_ellipse(geom='polygon', aes(colour=Nest, fill=observed), alpha = 0.5, level = 0.95)
-pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultradata_analyses/ordination_analyses/Additional_File_6.pdf",width=8)#change the path for your computer
+  stat_ellipse(geom='polygon', aes(colour=Nest, fill=Nest), alpha = 0.5, level = 0.95)
+pdf("D:/Czech/triatomine_manuscript/MS-Triatominae/results/ultracleandata_analyses/ordination_analyses/Additional_File_6.pdf",width=8)#change the path for your computer
 print(Additional_File_6)
 dev.off()
 
